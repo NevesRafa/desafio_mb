@@ -31,6 +31,7 @@ class LoginAcitivity : AppCompatActivity() {
 
             val intent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
+                .setIsSmartLockEnabled(false)
                 .setTheme(R.style.Theme_Desafio_MB)
                 .setAvailableProviders(providers)
                 .build()
