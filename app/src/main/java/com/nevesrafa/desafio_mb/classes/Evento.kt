@@ -16,4 +16,12 @@ class Evento(
     val valorUnitario: Double,
     val lotacao: Int,
     val quantidadeVendido: Int
-) : Parcelable
+) : Parcelable {
+
+    fun quantidadeDisponivel(): Int {
+
+        val quantidade = lotacao - quantidadeVendido
+        return quantidade
+    }
+}
+
