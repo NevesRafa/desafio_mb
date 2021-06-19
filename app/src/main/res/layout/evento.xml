@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="19sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nome do envento" />
@@ -23,6 +24,7 @@
         android:layout_margin="8dp"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nomeDoEvento"
         tools:text="Data" />
@@ -34,6 +36,7 @@
         android:layout_margin="8dp"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/data"
         app:layout_constraintTop_toBottomOf="@id/nomeDoEvento"
@@ -46,6 +49,7 @@
         android:layout_margin="8dp"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/data"
         tools:text="Local" />
@@ -57,6 +61,7 @@
         android:layout_margin="8dp"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/local"
         app:layout_constraintTop_toBottomOf="@id/horario"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tituloEventos"
@@ -14,7 +14,38 @@
         android:text="Eventos"
         android:textColor="@color/black"
         android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/filtros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/filtros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/lista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloEventos">
+
+        <RadioButton
+            android:id="@+id/empresarial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evento Empresariais"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/universitario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="Evento Universitário"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista"
@@ -23,6 +54,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tituloEventos"
+        app:layout_constraintTop_toBottomOf="@id/filtros"
         tools:listitem="@layout/evento" />
 </androidx.constraintlayout.widget.ConstraintLayout>

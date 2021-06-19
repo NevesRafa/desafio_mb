@@ -23,6 +23,8 @@ class LoginAcitivity : AppCompatActivity() {
 
         presenter = LoginPresenter(this)
 
+        // Configurando Firebase Login
+
         binding.botaoCriarLogin.setOnClickListener {
             val providers = listOf(
                 AuthUI.IdpConfig.EmailBuilder().build(),

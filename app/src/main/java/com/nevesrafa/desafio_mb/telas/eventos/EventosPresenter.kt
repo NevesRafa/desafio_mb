@@ -7,7 +7,7 @@ class EventosPresenter(val activity: EventosActivity) {
     val listaEventos = listOf(
         Evento(
             1,
-            "Palestra ComercialSeminário Empresarial: Construindo uma empresa lucrativa",
+            "Palestra Comercial: Construindo uma empresa lucrativa",
             "Empresarial",
             "20/06/2021",
             "16:00",
@@ -16,7 +16,7 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            80
         ),
         Evento(
             2,
@@ -29,24 +29,24 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            33
         ),
         Evento(
             3,
-            "FEIRA EBS 2021",
+            "Feira de Empreendedorismo 2021",
             "Empresarial",
             "22/06/2021",
             "16:00",
-            ",	17:00",
+            "17:00",
             "Campinas",
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            15
         ),
         Evento(
             5,
-            "Treinamento Empresarial",
+            "Treinamento Kotlin",
             "Empresarial",
             "24/06/2021",
             "16:00",
@@ -55,11 +55,11 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            18
         ),
         Evento(
             6,
-            "Palestra empreendedorismo",
+            "Palestra Economia Aplicada",
             "Universitário",
             "25/06/2021",
             "16:00",
@@ -68,7 +68,7 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            90
         ),
         Evento(
             7,
@@ -81,11 +81,11 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            46
         ),
         Evento(
             8,
-            "Palestra motivacional",
+            "Palestra Motivacional",
             "Universitário",
             "27/06/2021",
             "16:00",
@@ -94,11 +94,11 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            90
         ),
         Evento(
             9,
-            "Workshop Adm",
+            "Workshop Administração 2021",
             "Universitário",
             "28/06/2021",
             "16:00",
@@ -107,11 +107,11 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            71
         ),
         Evento(
             10,
-            "	Workshop TI",
+            "Workshop Tecnologia da Informação",
             "Universitário",
             "29/06/2021",
             "16:00",
@@ -120,10 +120,21 @@ class EventosPresenter(val activity: EventosActivity) {
             "rafaelneves02@gmail.com",
             50.00,
             300,
-            1
+            300
         )
 
     )
+
+    fun mostraEmpresarial() {
+
+        val listaFiltrada = listaEventos.filter { it.tipo == "Empresarial" }
+
+        activity.mostraEventos(listaFiltrada)
+    }
+
+    fun mostrarTodosEventos() {
+        activity.mostraEventos(listaEventos)
+    }
 }
 
 

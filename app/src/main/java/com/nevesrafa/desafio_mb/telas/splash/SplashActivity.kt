@@ -19,6 +19,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
         presenter = SplashPresenter(this)
 
+        // Validando login tempo de 5 segundos (5000L)
         Handler().postDelayed({
             presenter.validaLogin()
         }, 5000L)

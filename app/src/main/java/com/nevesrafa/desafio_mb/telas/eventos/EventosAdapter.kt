@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nevesrafa.desafio_mb.classes.Evento
 import com.nevesrafa.desafio_mb.databinding.EventoBinding
 
-class EventosAdapter(val eventos: List<Evento>) : RecyclerView.Adapter<EventosViewHolder>() {
+class EventosAdapter(val clique: (Evento) -> Unit) : RecyclerView.Adapter<EventosViewHolder>() {
+
+    val eventos = mutableListOf<Evento>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventosViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -18,11 +20,19 @@ class EventosAdapter(val eventos: List<Evento>) : RecyclerView.Adapter<EventosVi
 
     override fun onBindViewHolder(holder: EventosViewHolder, position: Int) {
         val evento = eventos[position]
-        holder.escreveNaTela(evento)
+        holder.escreveNaTela(evento, clique)
 
     }
 
     override fun getItemCount(): Int {
         return eventos.size
+    }
+
+
+    fun adicionaEventos(listaEvento: List<Evento>) {
+        eventos.clear()  // Limpa a lista.
+        eventos.addAll(listaEvento) // Add a lista toda.
+        notifyDataSetChanged() // Reconstroi a lista.
+
     }
 }
