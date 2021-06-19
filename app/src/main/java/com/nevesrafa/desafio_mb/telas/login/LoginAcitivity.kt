@@ -57,5 +57,6 @@ class LoginAcitivity : AppCompatActivity() {
     fun abreTelaInicial() {
         val intent = Intent(this, InicialActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
