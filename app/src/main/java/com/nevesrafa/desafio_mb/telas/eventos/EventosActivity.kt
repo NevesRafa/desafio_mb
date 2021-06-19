@@ -34,13 +34,21 @@ class EventosActivity : AppCompatActivity() {
         binding.lista.adapter = adapter
         binding.lista.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
 
-        // Checando se o filtro está selecionado.
+
 
         binding.empresarial.setOnCheckedChangeListener { _, isChecked ->
 
+            // Checando se o filtro Empresarial está selecionado.
             if (isChecked == true) {
                 presenter.mostraEmpresarial()
             }
+        }
+
+
+        binding.universitario.setOnCheckedChangeListener { _, isChecked ->
+
+            if (isChecked == true)
+                presenter.mostraUniversitario()
         }
 
         presenter.mostrarTodosEventos()

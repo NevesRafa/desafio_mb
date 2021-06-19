@@ -132,6 +132,13 @@ class EventosPresenter(val activity: EventosActivity) {
         activity.mostraEventos(listaFiltrada)
     }
 
+    fun mostraUniversitario() {
+
+        val listaFiltrada = listaEventos.filter { it.tipo == "Universitário" }
+
+        activity.mostraEventos(listaFiltrada)
+    }
+
     fun mostrarTodosEventos() {
         activity.mostraEventos(listaEventos)
     }
