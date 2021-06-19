@@ -2,6 +2,7 @@ package com.nevesrafa.desafio_mb.telas.eventos
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,8 +48,9 @@ class EventosActivity : AppCompatActivity() {
 
         binding.universitario.setOnCheckedChangeListener { _, isChecked ->
 
-            if (isChecked == true)
+            if (isChecked == true) {
                 presenter.mostraUniversitario()
+            }
         }
 
         presenter.mostrarTodosEventos()
@@ -57,5 +59,21 @@ class EventosActivity : AppCompatActivity() {
     fun mostraEventos(listaFiltrada: List<Evento>) {
         adapter.adicionaEventos(listaFiltrada)
 
+    }
+
+
+    fun mostraLoading() {
+        binding.loading.visibility = View.VISIBLE
+        binding.lista.visibility = View.INVISIBLE
+        binding.universitario.visibility = View.INVISIBLE
+        binding.empresarial.visibility = View.INVISIBLE
+    }
+
+    fun escondeLoading() {
+        binding.loading.visibility = View.GONE
+        binding.lista.visibility = View.VISIBLE
+        binding.universitario.visibility = View.VISIBLE
+        binding.empresarial.visibility = View.VISIBLE
+        binding.carregando.visibility = View.GONE
     }
 }

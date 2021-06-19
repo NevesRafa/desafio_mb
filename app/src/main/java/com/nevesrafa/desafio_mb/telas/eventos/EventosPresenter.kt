@@ -1,5 +1,6 @@
 package com.nevesrafa.desafio_mb.telas.eventos
 
+import android.os.Handler
 import com.nevesrafa.desafio_mb.classes.Evento
 
 class EventosPresenter(val activity: EventosActivity) {
@@ -140,8 +141,15 @@ class EventosPresenter(val activity: EventosActivity) {
     }
 
     fun mostrarTodosEventos() {
-        activity.mostraEventos(listaEventos)
+        activity.mostraLoading()
+
+        Handler().postDelayed({
+            activity.escondeLoading()
+            activity.mostraEventos(listaEventos)
+        }, 4000L)
     }
+
+
 }
 
 
