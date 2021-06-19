@@ -50,7 +50,7 @@
         android:id="@+id/loading"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:indeterminateTint="@color/purple_700"
+        android:indeterminateTint="#1B1135"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
