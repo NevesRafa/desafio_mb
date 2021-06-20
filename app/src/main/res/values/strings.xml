@@ -9,4 +9,31 @@
     <string name="quantidade_vendido">Quntidade Vendida: %s / %s</string>
     <string name="ola">Olá,\n%s</string>
     <string name="quantidade">Quantidade: %s</string>
+    <string name="sair">sair</string>
+    <string name="meus_ingressos">Meus Ingressos</string>
+    <string name="eventos">Eventos</string>
+    <string name="comprar">Comprar</string>
+    <string name="qtd">Qtd</string>
+    <string name="eventos">Eventos</string>
+    <string name="evento_empresariais">Evento Empresariais</string>
+    <string name="evento_universit_rio">Evento Universitário</string>
+    <string name="carregando_eventos">Carregando Eventos...</string>
+    <string name="criar_login">criar login</string>
+    <string name="meus_ingressos">Meus Ingressos</string>
+    <string name="valor_do_pagamento">Valor do pagamento</string>
+    <string name="nome_no_cart_o">Nome no cartão</string>
+    <string name="n_mero_do_cart_o">Número do cartão</string>
+    <string name="vencimento_mm_aa">Vencimento MM/AA</string>
+    <string name="cod_seguran_a">Cod Segurança</string>
+    <string name="cep">CEP</string>
+    <string name="pagar">Pagar</string>
+    <string name="campo_vazio">Por favor digite uma quantidade =)</string>
+    <string name="evento_lotado">Desculpa, o evento já está lotado =/</string>
+    <string name="erro_login">Erro no Login, tente novamente =)</string>
+    <string name="cartao_invalido">Número do cartão inválido, porfavor tente novamente!</string>
+    <string name="erro_data_vencimento">Data de vencimento inválida, porfavor tente novamente!</string>
+    <string name="erro_cod_seguranca">Código de segurança inválido, porfavor tente novamente!</string>
+    <string name="erro_cep">CEP inválido, porfavor tente novamente!</string>
+    <string name="erro_nome">Por favor digite seu nome!</string>
+    <string name="validacao_ok">Obrigado pela compra, esperamos você por lá =)</string>
 </resources>

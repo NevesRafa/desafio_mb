@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Eventos"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/eventos"
         android:textColor="@color/black"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@id/filtros"
@@ -33,15 +34,19 @@
             android:id="@+id/empresarial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Evento Empresariais"
+            android:buttonTint="#FF5722"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/evento_empresariais"
             android:textColor="@color/black" />
 
         <RadioButton
             android:id="@+id/universitario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/laranja"
             android:layout_marginLeft="24dp"
-            android:text="Evento Universitário"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/evento_universit_rio"
             android:textColor="@color/black" />
 
     </RadioGroup>
@@ -50,7 +55,7 @@
         android:id="@+id/loading"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:indeterminateTint="#1B1135"
+        android:indeterminateTint="@color/laranja"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +65,8 @@
         android:id="@+id/carregando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carregando Eventos..."
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/carregando_eventos"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -39,6 +39,10 @@
         <activity
             android:name=".telas.meus_ingressos.MeusIngressosActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".telas.pagamento.PagamentoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

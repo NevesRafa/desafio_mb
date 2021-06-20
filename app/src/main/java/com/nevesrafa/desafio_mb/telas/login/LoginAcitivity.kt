@@ -13,15 +13,12 @@ import com.nevesrafa.desafio_mb.telas.inicial.InicialActivity
 class LoginAcitivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLoginBinding
-    lateinit var presenter: LoginPresenter
     val fluxoDeLogin = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        presenter = LoginPresenter(this)
 
         // Configurando Firebase Login
 
@@ -34,6 +31,7 @@ class LoginAcitivity : AppCompatActivity() {
             val intent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setIsSmartLockEnabled(false)
+                .setLogo(R.drawable.logo)
                 .setTheme(R.style.Theme_Desafio_MB)
                 .setAvailableProviders(providers)
                 .build()
@@ -49,7 +47,7 @@ class LoginAcitivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 abreTelaInicial()
             } else {
-                Toast.makeText(this, "Erro no Login, tente novamente =)", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.erro_login), Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -1,11 +1,13 @@
 package com.nevesrafa.desafio_mb.telas.compra
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.nevesrafa.desafio_mb.R
 import com.nevesrafa.desafio_mb.classes.Evento
 import com.nevesrafa.desafio_mb.databinding.ActivityCompraBinding
+import com.nevesrafa.desafio_mb.telas.pagamento.PagamentoActivity
 import java.text.DecimalFormat
 
 class CompraActivity : AppCompatActivity() {
@@ -60,14 +62,17 @@ class CompraActivity : AppCompatActivity() {
     }
 
     fun mostraErroVazio() {
-        Toast.makeText(this, "Por favor digite uma quantidade =)", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, getString(R.string.campo_vazio), Toast.LENGTH_LONG).show()
     }
 
     fun mostraErroMaiorQueLimite() {
-        Toast.makeText(this, "Desculpa, o evento já está lotado =/", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, getString(R.string.evento_lotado), Toast.LENGTH_LONG).show()
     }
 
     fun mostraTelaDePagamento(valorDaCompra: Double) {
-
+        val intent = Intent(this, PagamentoActivity::class.java)
+        intent.putExtra("valor total", valorDaCompra)
+        startActivity(intent)
+        finish()
     }
 }
