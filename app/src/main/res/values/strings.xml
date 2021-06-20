@@ -3,9 +3,10 @@
     <string name="contato">Contato: %s</string>
     <string name="tipo">Tipo: %s</string>
     <string name="data">Data: %s</string>
-    <string name="hora">Horário: %s</string>
+    <string name="hora">Horário: %s - %s</string>
     <string name="local">Local: %s</string>
     <string name="valor">R$ %s</string>
     <string name="quantidade_vendido">Quntidade Vendida: %s / %s</string>
     <string name="ola">Olá,\n%s</string>
+    <string name="quantidade">Quantidade: %s</string>
 </resources>

@@ -17,19 +17,17 @@ class CompraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCompraBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         presenter = CompraPresenter(this)
 
         val eventoSelecionado = intent.getParcelableExtra<Evento>("evento selecionado")!!
 
-        presenter.guardaEvento = eventoSelecionado // Enviando eventoSelecionado para o presenter
+        presenter.eventoSelecionado =
+            eventoSelecionado // Enviando eventoSelecionado para o presenter
 
         iniciaTela(eventoSelecionado)
 
         binding.botaoComprar.setOnClickListener {
-
             val quantidadeDigitada = binding.quantidadeDigitada.text.toString().toIntOrNull()
-
             presenter.fazCompra(quantidadeDigitada)
         }
     }
@@ -48,10 +46,8 @@ class CompraActivity : AppCompatActivity() {
         binding.contatoCrompra.text = getString(R.string.contato, eventoSelecionado.contato)
         binding.dataCompra.text = getString(R.string.data, eventoSelecionado.data)
         binding.tipoCompra.text = getString(R.string.tipo, eventoSelecionado.tipo)
-        binding.horarioCompra.text = getString(
-            R.string.hora,
-            "${eventoSelecionado.horaInicio} - ${eventoSelecionado.horaFim}"
-        )
+        binding.horarioCompra.text =
+            getString(R.string.hora, eventoSelecionado.horaInicio, eventoSelecionado.horaFim)
         binding.localCompra.text = getString(R.string.local, eventoSelecionado.local)
         binding.nomeEventoCompra.text = eventoSelecionado.nomeDoEvento
         binding.quantidadeDisponivelCompra.text = getString(
@@ -64,18 +60,14 @@ class CompraActivity : AppCompatActivity() {
     }
 
     fun mostraErroVazio() {
-        Toast.makeText(this, " Porfavor digite uma quantidade =) ", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Por favor digite uma quantidade =)", Toast.LENGTH_LONG).show()
     }
 
     fun mostraErroMaiorQueLimite() {
-        Toast.makeText(this, " Desculpa, o evento já está lotado =/ ", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Desculpa, o evento já está lotado =/", Toast.LENGTH_LONG).show()
     }
 
-    fun mostraCompraConcluida() {
-        Toast.makeText(
-            this,
-            " Obrigado, compra concluida com susseso esperamos você por lá =) ",
-            Toast.LENGTH_LONG
-        ).show()
+    fun mostraTelaDePagamento(valorDaCompra: Double) {
+
     }
 }
