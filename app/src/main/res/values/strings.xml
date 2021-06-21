@@ -14,12 +14,10 @@
     <string name="eventos">Eventos</string>
     <string name="comprar">Comprar</string>
     <string name="qtd">Qtd</string>
-    <string name="eventos">Eventos</string>
     <string name="evento_empresariais">Evento Empresariais</string>
     <string name="evento_universit_rio">Evento Universitário</string>
     <string name="carregando_eventos">Carregando Eventos...</string>
     <string name="criar_login">criar login</string>
-    <string name="meus_ingressos">Meus Ingressos</string>
     <string name="valor_do_pagamento">Valor do pagamento</string>
     <string name="nome_no_cart_o">Nome no cartão</string>
     <string name="n_mero_do_cart_o">Número do cartão</string>
